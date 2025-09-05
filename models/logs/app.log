@@ -1,0 +1,261 @@
+[2025-09-03 15:52:51] [INFO] Starting training via CLI...
+[2025-09-03 15:52:51] [INFO] Loading data...
+[2025-09-03 15:52:51] [INFO] Fitting pipeline without grid search...
+[2025-09-03 15:52:52] [INFO] Test accuracy: 0.9762
+[2025-09-03 15:52:52] [INFO] Saved model to models\trained_model.pkl
+[2025-09-03 15:52:52] [INFO] Saved model to models\label_encoder.pkl
+[2025-09-03 15:52:52] [INFO] Saved predictions to predictions.csv
+[2025-09-03 15:52:52] [INFO] Saved model to models/trained_model.pkl and encoder to models/label_encoder.pkl
+[2025-09-03 15:52:52] [INFO] Training completed successfully. Artifacts saved.
+[2025-09-03 15:53:11] [INFO] Starting Flask app...
+[2025-09-03 15:59:43] [INFO] Starting training via CLI...
+[2025-09-03 16:01:09] [INFO] Starting training via CLI...
+[2025-09-03 16:01:09] [INFO] Loading data...
+[2025-09-03 16:01:09] [INFO] Training DecisionTree...
+[2025-09-03 16:01:09] [INFO] DecisionTree accuracy: 0.9762
+[2025-09-03 16:01:09] [INFO] Training RandomForest...
+[2025-09-03 16:01:12] [INFO] RandomForest accuracy: 0.9762
+[2025-09-03 16:01:12] [INFO] Training NaiveBayes...
+[2025-09-03 16:01:12] [INFO] NaiveBayes accuracy: 0.9762
+[2025-09-03 16:01:12] [INFO] Training SVM...
+[2025-09-03 16:01:12] [INFO] SVM accuracy: 0.9762
+[2025-09-03 16:01:12] [INFO] Training LogReg...
+[2025-09-03 16:01:12] [INFO] LogReg accuracy: 0.9762
+[2025-09-03 16:01:12] [INFO] Saved model to models\trained_model.pkl
+[2025-09-03 16:01:12] [INFO] Saved model to models\label_encoder.pkl
+[2025-09-03 16:01:12] [INFO] Best model: DecisionTree with accuracy 0.9762
+[2025-09-03 16:01:12] [INFO] Saved model to models/trained_model.pkl and encoder to models/label_encoder.pkl
+[2025-09-03 16:01:12] [INFO] Saved predictions to predictions.csv
+[2025-09-03 16:01:12] [INFO] Saved model performance report: model_performance.csv
+[2025-09-03 16:01:12] [INFO] Training completed successfully. Artifacts saved.
+[2025-09-03 16:19:43] [INFO] Starting Flask app...
+[2025-09-03 16:21:15] [INFO] Loaded model from models\trained_model.pkl
+[2025-09-03 16:21:15] [INFO] Loaded model from models\trained_model.pkl
+[2025-09-03 16:21:15] [INFO] Loaded model from models\label_encoder.pkl
+[2025-09-03 16:21:15] [INFO] Loaded model from models\label_encoder.pkl
+[2025-09-03 16:21:15] [ERROR] Prediction failed: at least one array or dtype is required
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 931, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+ValueError: at least one array or dtype is required
+[2025-09-03 16:21:15] [ERROR] Prediction failed: at least one array or dtype is required
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 931, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+ValueError: at least one array or dtype is required
+[2025-09-03 16:21:15] [ERROR] Error in /predict: at least one array or dtype is required
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\app.py", line 50, in predict
+    out = predict_df(df, model=model, encoder=enc)
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 931, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+ValueError: at least one array or dtype is required
+[2025-09-03 16:21:15] [ERROR] Error in /predict: at least one array or dtype is required
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\app.py", line 50, in predict
+    out = predict_df(df, model=model, encoder=enc)
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2944, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 931, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+ValueError: at least one array or dtype is required
+[2025-09-03 16:21:33] [ERROR] Prediction failed: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- num_symptoms
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- num_symptoms
+
+[2025-09-03 16:21:33] [ERROR] Error in /predict: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- num_symptoms
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\app.py", line 36, in predict
+    out = predict_df(df, model=model, encoder=enc)
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- num_symptoms
+
+[2025-09-03 16:22:26] [ERROR] Prediction failed: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- prognosis
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- prognosis
+
+[2025-09-03 16:22:26] [ERROR] Error in /predict: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- prognosis
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\app.py", line 36, in predict
+    out = predict_df(df, model=model, encoder=enc)
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- prognosis
+
+[2025-09-03 16:30:47] [ERROR] Prediction failed: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- dischromic_patches
+- foul_smell_of_urine
+- spotting_urination
+Feature names seen at fit time, yet now missing:
+- dischromic _patches
+- foul_smell_of urine
+- spotting_ urination
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- dischromic_patches
+- foul_smell_of_urine
+- spotting_urination
+Feature names seen at fit time, yet now missing:
+- dischromic _patches
+- foul_smell_of urine
+- spotting_ urination
+
+[2025-09-03 16:30:47] [ERROR] Error in /predict: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- dischromic_patches
+- foul_smell_of_urine
+- spotting_urination
+Feature names seen at fit time, yet now missing:
+- dischromic _patches
+- foul_smell_of urine
+- spotting_ urination
+Traceback (most recent call last):
+  File "E:\HACKATHON MEDICAL SOLUTION\src\app.py", line 50, in predict
+    out = predict_df(df, model=model, encoder=enc)
+  File "E:\HACKATHON MEDICAL SOLUTION\src\models\predict.py", line 32, in predict_df
+    preds = pipe.predict(df)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\pipeline.py", line 787, in predict
+    Xt = transform.transform(Xt)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\preprocessing\_data.py", line 1062, in transform
+    X = validate_data(
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2919, in validate_data
+    _check_feature_names(_estimator, X, reset=reset)
+  File "E:\HACKATHON MEDICAL SOLUTION\venv\lib\site-packages\sklearn\utils\validation.py", line 2777, in _check_feature_names
+    raise ValueError(message)
+ValueError: The feature names should match those that were passed during fit.
+Feature names unseen at fit time:
+- dischromic_patches
+- foul_smell_of_urine
+- spotting_urination
+Feature names seen at fit time, yet now missing:
+- dischromic _patches
+- foul_smell_of urine
+- spotting_ urination
+
+[2025-09-03 16:38:01] [INFO] Starting Flask app...
+[2025-09-03 16:38:20] [INFO] Loaded model from models\trained_model.pkl
+[2025-09-03 16:38:20] [INFO] Loaded model from models\label_encoder.pkl
+[2025-09-03 16:41:21] [INFO] Starting Flask app...
+[2025-09-03 16:41:35] [INFO] Loaded model from models\trained_model.pkl
+[2025-09-03 16:41:35] [INFO] Loaded model from models\label_encoder.pkl
+[2025-09-03 16:43:19] [INFO] Starting Flask app...
+[2025-09-03 16:43:32] [INFO] Loaded model from models\trained_model.pkl
+[2025-09-03 16:43:32] [INFO] Loaded model from models\label_encoder.pkl
+[2025-09-04 11:09:32] [INFO] Starting Flask app...
+[2025-09-04 11:10:13] [INFO] Loaded model from models\trained_model.pkl
+[2025-09-04 11:10:13] [INFO] Loaded model from models\label_encoder.pkl
