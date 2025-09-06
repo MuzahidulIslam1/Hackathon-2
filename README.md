@@ -20,7 +20,6 @@ It supports **single-record JSON input** and **bulk CSV uploads**, returning int
 ## 🖼️ Screenshot
 
 ![App UI screenshot](https://github.com/MuzahidulIslam1/Hackathon-2/blob/main/image.png)
-_Replace the above path with your actual UI screenshot for better presentation._
 
 ---
 
@@ -113,7 +112,7 @@ Hackathon-2/
 │   ├── trained_model.pkl
 │   └── label_encoder.pkl
 └── predictions.csv         # Latest predictions
-
+```
 
 
 ## 🤖 Model Training Details
