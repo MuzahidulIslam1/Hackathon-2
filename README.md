@@ -19,7 +19,7 @@ It supports **single-record JSON input** and **bulk CSV uploads**, returning int
 
 ## 🖼️ Screenshot
 
-!([E:\HACKATHON MEDICAL SOLUTION\image.png](https://github.com/MuzahidulIslam1/Hackathon-2/blob/main/image.png))  
+![App UI screenshot](https://github.com/MuzahidulIslam1/Hackathon-2/blob/main/image.png)
 _Replace the above path with your actual UI screenshot for better presentation._
 
 ---
@@ -89,6 +89,7 @@ Upload a .csv file with only symptom columns (no prognosis column).
 The system will return a downloadable CSV with predictions appended.
 
 ## 📂 Project Structure
+```bash
 Hackathon-2/
 ├── app.py                  # Flask app (UI + endpoints)
 ├── requirements.txt
@@ -112,6 +113,7 @@ Hackathon-2/
 │   ├── trained_model.pkl
 │   └── label_encoder.pkl
 └── predictions.csv         # Latest predictions
+
 
 
 ## 🤖 Model Training Details
