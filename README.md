@@ -19,7 +19,7 @@ It supports **single-record JSON input** and **bulk CSV uploads**, returning int
 
 ## 🖼️ Screenshot
 
-![App UI screenshot](E:\HACKATHON MEDICAL SOLUTION\image.png)  
+!(E:\HACKATHON MEDICAL SOLUTION\image.png)  
 _Replace the above path with your actual UI screenshot for better presentation._
 
 ---
@@ -89,56 +89,53 @@ Upload a .csv file with only symptom columns (no prognosis column).
 The system will return a downloadable CSV with predictions appended.
 
 ## 📂 Project Structure
-project_root/
-│
-├── app.py                          # Flask app (UI + endpoints)
-├── model.train.py                  # Code to trigger the train.py script to run it from the terminal    
+Hackathon-2/
+├── app.py                  # Flask app (UI + endpoints)
 ├── requirements.txt
 ├── README.md
-│── gitignore
 ├── templates/
-│   └── index.html                   # HTML UI
+│   └── index.html          # HTML UI
 ├── static/
-│   └── style.css
-│
+│   └── style.css           # CSS for UI
 ├── data/
-│   ├── raw/                         # Training & Testing CSVs
-│ 
-│
+│   └── raw/                # Training & Testing CSVs
 ├── src/
 │   ├── data/
-│   │   └── preprocess.py            # Data loading & preprocessing
+│   │   └── preprocess.py   # Data loading & preprocessing
 │   ├── models/
-│   │   ├── train.py                 # Training script
-│   │   └── predict.py               # Prediction functions
-│   ├── utils/
-│       ├── helpers.py               # Save/load functions
-│       └── logger.py                # Logging setup
-│
-└── models/
-    ├── trained_model.pkl
-    └── label_encoder.pkl
+│   │   ├── train.py        # Training script
+│   │   └── predict.py      # Prediction functions
+│   └── utils/
+│       ├── helpers.py      # Save/load functions
+│       └── logger.py       # Logging setup
+├── models/
+│   ├── trained_model.pkl
+│   └── label_encoder.pkl
+└── predictions.csv         # Latest predictions
 
 ## 🤖 Model Training Details
-    Label Encoding: Target diseases converted via LabelEncoder.
-    Preprocessing: StandardScaler → PCA (retain 95% variance).
-    Classifiers Tested:
-    Decision Tree
-    Random Forest
-    Gaussian Naive Bayes
-    Linear SVM
-    Logistic Regression
-    The best-performing model (based on accuracy) is saved for predictions.
+Label Encoding: Target diseases encoded using LabelEncoder
+
+Preprocessing: StandardScaler → PCA (retain 95% variance)
+
+Classifiers Tested:
+  Decision Tree
+  Random Forest
+  Gaussian Naive Bayes
+  Linear SVM
+  Logistic Regression
+Best Model chosen based on accuracy and saved for predictions
 
 ## 🛠️ Tech Stack
-    | Component       | Tools / Libraries                          |
-| --------------- | ------------------------------------------ |
-| Backend         | Python, Flask                              |
-| Modeling        | scikit-learn (pipelines, PCA, classifiers) |
-| Data Processing | pandas, numpy                              |
-| Logging         | Python logging module                      |
-| CLI Training    | argparse                                   |
-| UI              | HTML, CSS, minimal JS                      |
+| Component        | Tools / Libraries                          |
+| ---------------- | ------------------------------------------ |
+| **Backend**      | Python, Flask                              |
+| **Modeling**     | scikit-learn (pipelines, PCA, classifiers) |
+| **Data**         | pandas, numpy                              |
+| **Logging**      | Python logging module                      |
+| **CLI Training** | argparse                                   |
+| **UI**           | HTML, CSS, Vanilla JS                      |
+
 
 ## 📜 License & Contact
 © 2025 [PW Skills]
