@@ -139,10 +139,4 @@ Best Model chosen based on accuracy and saved for predictions
 | **UI**           | HTML, CSS, Vanilla JS                      |
 
 
-## 📜 License & Contact
-© 2025 [PW Skills]
-Licensed under the MIT License
 
-📧 Contact:muzahidul.islam@pw.live
-
-🌐 GitHub: @MuzahidulIslam1
